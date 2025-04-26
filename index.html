@@ -11,26 +11,64 @@
     body {
       background-color: #0f0f0f;
       color: #e0e0e0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .terminal-window {
+      background-color: #111827;
+      border: 2px solid #4b5563;
+      border-radius: 8px;
+      padding: 1.5rem;
+      max-width: 800px;
+      width: 90%;
+      margin: 2rem auto;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+    .terminal-header {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ef4444; /* Red */
+    }
+    .terminal-dot:nth-child(2) {
+      background-color: #facc15; /* Yellow */
+    }
+    .terminal-dot:nth-child(3) {
+      background-color: #22c55e; /* Green */
     }
     a {
       text-decoration: none;
     }
   </style>
 </head>
-<body class="font-sans min-h-screen flex flex-col items-center justify-center">
-  <div class="text-center max-w-xl px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-white">ZeroDumb</h1>
-    <p class="text-gray-400 mb-8">Exploring the edge of ethical hacking, one questionable decision at a time.</p>
-
-    <div class="space-y-3">
-      <a href="https://zerodumb.dev" class="block bg-indigo-600 hover:bg-indigo-500 py-2 px-4 rounded text-white font-medium">📜 Ethics Journal (Blog)</a>
-      <a href="https://github.com/ZeroDumb/recon-toolkit" class="block bg-green-600 hover:bg-green-500 py-2 px-4 rounded text-white font-medium">🛠 Recon Toolkit</a>
-      <a href="https://github.com/ZeroDumb/seven-sisters" class="block bg-blue-600 hover:bg-blue-500 py-2 px-4 rounded text-white font-medium">🧠 Seven Sisters Framework</a>
+<body class="flex flex-col items-center justify-center min-h-screen px-4">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="terminal-dot"></div>
+      <div class="terminal-dot"></div>
+      <div class="terminal-dot"></div>
     </div>
 
-    <p class="mt-10 text-sm text-gray-500">
-      Built by <strong>Zero</strong>. Contact: <a href="mailto:zero@zerodumb.dev" class="underline hover:text-white">zero@zerodumb.dev</a>
-    </p>
+    <div class="text-gray-300 mb-6">
+      <p><span class="text-green-400">zerodumb@hq:</span><span class="text-blue-400">~</span>$ cat welcome.txt</p>
+      <p>Welcome to ZeroDumb HQ</p>
+      <p>Exploring the frontier of ethical hacking, recon, and digital responsibility.</p>
+    </div>
+
+    <div class="text-gray-300 mb-6">
+      <p><span class="text-green-400">zerodumb@hq:</span><span class="text-blue-400">~</span>$ ls -l /</p>
+      <ul class="list-none mt-2 space-y-2">
+        <li><a href="https://zerodumb.dev" class="text-indigo-400 hover:text-indigo-300">📜 Ethics Journal (Blog)</a></li>
+        <li><a href="https://github.com/ZeroDumb/recon-toolkit" class="text-green-400 hover:text-green-300">🛠 Recon Toolkit</a></li>
+        <li><a href="https://github.com/ZeroDumb/seven-sisters" class="text-blue-400 hover:text-blue-300">🧠 Seven Sisters Framework</a></li>
+      </ul>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-8">Built by <strong>Zero</strong>. Contact: <a href="mailto:zero@zerodumb.dev" class="underline hover:text-white">zero@zerodumb.dev</a></p>
   </div>
 </body>
 </html>
